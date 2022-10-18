@@ -15,7 +15,7 @@ class Program
 
         Console.WriteLine("Month is {0}", months[month - 1]);
         RangeTest();
-      
+        RoundTest();
     }
 
   public static void RangeTest() {
@@ -24,5 +24,19 @@ class Program
     foreach (int num in squares) {
       Console.WriteLine(num);
     }
+  }
+
+  public static void RoundTest() {
+    float originalNumber1 = 1.23f;
+    float originalNumber2 = 3.15f;
+    float originalNumber3 = 1.9f;
+
+    float roundedNumber1 = (float)Math.Round(originalNumber1, 1);
+    float roundedNumber2 = (float)Math.Round(originalNumber2, 1);
+    float roundedNumber3 = (float)Math.Round(originalNumber3, 0);
+
+    Console.WriteLine("roundedNumber1 is " + roundedNumber1);
+    Console.WriteLine("roundedNumber2 is " + roundedNumber2);
+    Console.WriteLine("roundedNumber3 is " + roundedNumber3);   
   }
 }
