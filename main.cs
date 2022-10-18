@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 class Program
 {
@@ -12,7 +14,15 @@ class Program
         int month = rnd.Next(1, 13);
 
         Console.WriteLine("Month is {0}", months[month - 1]);
-
+        RangeTest();
       
     }
+
+  public static void RangeTest() {
+    IEnumerable<int> squares = Enumerable.Range(1, 10).Select(x => x* x);
+
+    foreach (int num in squares) {
+      Console.WriteLine(num);
+    }
+  }
 }
